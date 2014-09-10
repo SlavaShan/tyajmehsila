@@ -1,0 +1,1245 @@
+@font-face {
+    font-family: 'PFDinDisplayPro-Reg';
+    src: url(../fonts/PFDinDisplayPro-Reg.ttf);
+}
+
+@font-face {
+    font-family: 'PFDinDisplayPro-Med';
+    src: url(../fonts/PFDinDisplayPro-Med.ttf);
+}
+
+@font-face {
+    font-family: 'PFDinDisplayPro-Bold';
+    src: url(../fonts/PFDinDisplayPro-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'PFDinDisplayPro-Light';
+    src: url(../fonts/PFDinDisplayPro-Light.ttf);
+}
+
+
+/* Hack retained to preserve specificity */
+/**
+ * HTML5 ✰ Boilerplate
+ *
+ * style.css contains a reset, font normalization and some base styles.
+ *
+ * Credit is left where credit is due.
+ * Much inspiration was taken from these projects:
+ * - yui.yahooapis.com/2.8.1/build/base/base.css
+ * - camendesign.com/design/
+ * - praegnanz.de/weblog/htmlcssjs-kickstart
+ */
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/**
+ * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
+ */
+body {
+  font: 13px/1.231 sans-serif;
+  *font-size: small;
+}
+/* Hack retained to preserve specificity */
+/* Normalize monospace sizing:
+   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, sans-serif;
+}
+/**
+ * Minimal base styles.
+ */
+/* 1) Always force a scrollbar in non-IE 
+   2) Remove iOS text size adjust without disabling user zoom: www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+/* j.mp/webkit-tap-highlight-color */
+a:link {
+  -webkit-tap-highlight-color: #fff;
+}
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover,
+a:active {
+  outline: none;
+}
+a,
+a:active,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+ul,
+ol {
+  list-style: none;
+}
+ol {
+  list-style-type: decimal;
+}
+/* Remove margins for navigation lists */
+nav ul,
+nav li {
+  margin: 0;
+  list-style: none;
+  list-style-image: none;
+}
+small {
+  font-size: 85%;
+}
+b,
+strong,
+th {
+  font-weight: bold;
+}
+td {
+  vertical-align: top;
+}
+/* Set sub, sup without affecting line-height: gist.github.com/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+pre {
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+.ie6 legend,
+.ie7 legend {
+  margin-left: -7px;
+}
+/* 1) Make inputs and buttons play nice in IE: www.viget.com/inspire/styling-the-button-element-in-internet-explorer/
+   2) WebKit browsers add a 2px margin outside the chrome of form elements. 
+      Firefox adds a 1px margin above and below textareas 
+   3) Set font-size to match <body>'s, and font-family to sans-serif 
+   4) Align to baseline */
+button,
+input,
+select,
+textarea {
+  width: auto;
+  overflow: visible;
+  margin: 0;
+  font-size: 100%;
+  font-family: sans-serif;
+  vertical-align: baseline;
+}
+/* 1) Remove default scrollbar in IE: www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/
+   2) Align to text-top */
+textarea {
+  overflow: auto;
+  vertical-align: text-top;
+}
+/* Hand cursor on clickable input elements */
+label,
+input[type="button"],
+input[type="submit"],
+input[type="image"],
+button {
+  cursor: pointer;
+}
+/* Remove extra padding and inner border in Firefox */
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/* Colors for form validity */
+input:invalid,
+textarea:invalid {
+  border-radius: 1px;
+  -moz-box-shadow: 0px 0px 5px red;
+  -webkit-box-shadow: 0px 0px 5px red;
+  box-shadow: 0px 0px 5px red;
+}
+.no-boxshadow input:invalid,
+.no-boxshadow textarea:invalid {
+  background-color: #f0dddd;
+}
+/* Bicubic resizing for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+/**
+ * You might tweak these..
+ */
+body,
+select,
+input,
+textarea {
+  /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
+
+  color: #444;
+  /* Set your base font here, to apply evenly */
+
+  /* font-family: Georgia, serif;  */
+
+}
+/* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+p.browsehappy a {
+  color: red;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Custom styles
+   ========================================================================== */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    min-width: 1000px;
+    color: #000;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    line-height: 1.42857;
+}
+
+body {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    position: relative;
+    *zoom: 1;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+
+/* HEADER */
+
+
+.header-top {
+    height: 30px;
+    background: #232323;
+}
+
+.header-top a {
+    line-height: 30px;
+}
+
+.left-side {
+    float: left;
+    font: 13px 'PFDinDisplayPro-Reg';
+    margin-left: 5px;
+}
+
+.left-side span {
+  margin: 0 3px;
+  color: #fff;
+}
+
+.right-side {
+    float: right;
+    font: 14px 'PFDinDisplayPro-Reg';
+    margin-right: 5px;
+}
+
+.right-side a:before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: -2px;
+  background: url(../images/consultant-icon.png);
+  width: 23px;
+  height: 19px;
+}
+
+.right-side a {
+  position: relative;
+  text-decoration: underline;
+  color: #fbcf2a;
+}
+
+.header-bottom {
+    background: url(../images/header-bg.jpg);
+    background-position: top center;
+    height: 263px;
+    min-width: 1000px;
+}
+
+.header-bottom-wrap {
+    position: relative;  
+}
+
+.header-bottom-wrap a.logo {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: block;
+    background: url(../images/logo.png);
+    width: 83px;
+    height: 67px;
+}
+
+.header-bottom-wrap h1.h-company-name {
+    position: absolute;
+    top: 10px;
+    left: 95px;
+    font: 48px 'PFDinDisplayPro-Med';
+    color: #0b98f3;
+}
+
+.header-bottom-wrap h2 {
+    position: absolute;
+    top: 20px;
+    left: 380px;
+    padding: 0 25px;
+    font: 15px 'PFDinDisplayPro-Reg';
+    color: #0e0e0e;
+    border-left: 1px solid #bac7cf;
+    border-right: 1px solid #bac7cf;
+}
+
+.header-bottom-wrap span.h-company-phone {
+    position: absolute;
+    top: 20px;
+    left: 635px;
+    padding: 5px 25px 6px 0;
+    font: 21px 'PFDinDisplayPro-Bold';
+    color: #0679c3;
+    border-right: 1px solid #bac7cf;
+}
+
+.header-bottom-wrap .basket-btn:before {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    content: '';
+    background: url(../images/basket-icon.png);
+    width: 20px;
+    height: 20px;
+}
+
+.header-bottom-wrap a.basket-btn {
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    display: block;
+    padding: 8px 15px 8px 35px;
+    font: 16px 'PFDinDisplayPro-Reg';
+    color: #0e0e0e;
+    border: 1px dotted #2b2c2c;
+}
+
+
+/* END HEADER */
+
+
+/* TOP-MENU */
+
+
+.top-menu {
+    height: 40px;
+    background: #232323;
+}
+
+.top-menu .nav ul li {
+    float: left;
+    margin-right: 49px;
+}
+
+.top-menu .nav ul li:first-child {
+    margin-left: 10px;
+}
+
+.top-menu .nav ul li:last-child {
+    margin-right: 10px;
+}
+
+.top-menu .nav ul li a {
+    display: block;
+    font: 16px "PFDinDisplayPro-Reg";
+    line-height: 40px;
+}
+
+.top-menu .nav ul li a:hover {
+    color: #fbcf2a;
+}
+
+.top-menu .nav ul li a.active {
+    color: #fbcf2a;
+}
+
+/* END TOP-MENU */
+
+
+/* MAIN-BLOCK */
+
+
+/* sidebar */
+
+
+.sidebar {
+    float: left;
+}
+
+.main-menu ul {
+    width: 200px;
+    padding: 10px 15px;
+    background: #f5f5f5;
+
+}
+
+.main-menu ul li {
+    padding: 18px 0;
+    border-bottom: 1px solid black;
+}
+
+.main-menu ul li:last-child {
+    border-bottom: none;
+}
+
+.main-menu ul li a {
+    position: relative;
+    display: block;
+    padding-left: 50px;
+    font: 14px "PFDinDisplayPro-Med";
+    text-transform: uppercase;
+    color: #232323;
+}
+
+.main-menu ul li a.bulldozer:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background: url(../images/bulldozer-icon.png);
+    width: 38px;
+    height: 25px;
+}
+
+.main-menu ul li a.excavator:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background: url(../images/excavator-icon.png);
+    width: 34px;
+    height: 34px;
+}
+
+.main-menu ul li a.piston:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background: url(../images/piston-icon.png);
+    width: 34px;
+    height: 36px;
+}
+
+.main-menu ul li a.toolbox:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background: url(../images/toolbox-icon.png);
+    width: 30px;
+    height: 33px;
+}
+
+.main-menu ul li a.wheel:before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 3px;
+    background: url(../images/wheel-icon.png);
+    width: 25px;
+    height: 30px;
+}
+
+.main-menu ul li a.hummer:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    background: url(../images/hummer-icon.png);
+    width: 33px;
+    height: 33px;
+}
+
+/*.main-menu ul li a:hover {
+    text-decoration: none;
+    color: #fbcf2a;
+}
+*/
+
+
+/* end sidebar*/
+
+
+/* main-content */
+
+
+.main-block {
+    padding-bottom: 80px;
+}
+
+.main-content {
+    width: 735px;
+    margin-left: 265px;
+}
+
+.main-content article {
+    float: left;
+    width: 215px;
+    margin-right: 45px; 
+}
+
+.main-content article:last-child {
+    margin-right: 0;
+}
+
+.main-content article h1 {
+    display: block;
+    padding: 0 0 10px 5px;
+    font: 24px "PFDinDisplayPro-Med"; 
+    color: #0f84d0;
+}
+
+.main-content .article-img-blc {
+    position: relative;
+    width: 214px;
+    height: 215px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.main-content .article-img-blc span {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    background: #0f84d0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.main-content .article-img-blc span a {
+    font: 18px 'PFDinDisplayPro-Med';
+}
+
+.main-content .article-img-blc img {
+    width: 100%;
+}
+
+
+/* end main-content */
+
+
+/* END MAIN-BLOCK */
+
+
+/* FOOTER */
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background: #232323;
+    color: #fff;
+}
+
+.footer .company-name {
+    float: left;
+    margin-left: 5px; 
+    font: 14px "PFDinDisplayPro-Reg";
+    line-height: 50px;
+}
+
+.footer .company-phone {
+    float: right;
+    margin-right: 5px;
+    font: 16px "PFDinDisplayPro-Bold";
+    line-height: 50px;
+}
+
+
+/* END FOOTER */
+
+
+/* //////////////////////// ABOUT COMPANY ///////////////////////////////*/
+
+
+.main-content .about-company img {
+    float: left;
+    padding: 0 30px 30px 0;
+}
+
+.main-content .about-company h3 {
+    margin-bottom: 15px;
+    font: 22px 'PFDinDisplayPro-Med';
+}
+
+
+/* //////////////////////// END ABOUT COMPANY ///////////////////////////////*/
+
+
+/* //////////////////////// SALE EQUIPMENT ///////////////////////////////*/
+
+
+.sale-eq-title {
+    padding: 20px 0;
+    font: 22px 'PFDinDisplayPro-Med';
+}
+
+
+/* sale-eq-filter-block */
+
+
+.sale-eq-filter-section {
+    padding: 20px;
+    background: #ebebeb;
+}
+
+.sale-eq-filter-section input {
+    font: 16px 'PFDinDisplayPro-Light';
+    border: 1px solid #e3e3e3;
+}
+
+.sale-eq-filter-section input:focus {
+    outline: none;
+}
+
+.sale-eq-filter-section .filter-top {
+    margin-bottom: 20px;
+}
+
+.filter-top .t-o-e-sec {
+    float: left;
+    position: relative;
+    margin-right: 52px;
+    width: 285px;
+}
+
+.filter-top .t-o-e-sec:last-child {
+    margin-right: 0;
+}
+
+.filter-top input {
+    height: 24px;
+    width: 272px;
+    padding-left: 10px;
+}
+
+.filter-top a.eq-drop-btn {
+    display: inline-block;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 26px;
+    height: 26px;
+    background: url(../images/down-arrow.png) no-repeat 50% 12px #f25924;
+} 
+
+.filter-bottom input[type="text"] {
+    padding-left: 10px;
+    width: 165px;
+    height: 24px;
+}
+
+.filter-bottom input[type="text"] + span {
+    padding: 0 10px;
+}
+
+.filter-bottom input.max-price {
+    color: #056eb3;
+}
+
+.filter-bottom input.min-price {
+    color: #e94428;
+}
+
+.filter-bottom input[type="checkbox"] {
+    margin-left: 25px;
+}
+
+.filter-bottom input[type="checkbox"] + label {
+    margin-left: 5px;
+    font: 16px 'PFDinDisplayPro-Light';
+}
+
+.f-b-search-btn {
+    display: inline-block;
+    margin-left: 15px;
+    padding: 5px 50px;
+    font: 14px 'PFDinDisplayPro-Reg';
+    background: -webkit-gradient(linear, left top, right top, from(#0a9eff), to(#0f83cd));
+    background: -webkit-linear-gradient(top, #0a9eff, #0f83cd);
+    background: -moz-linear-gradient(top, #0a9eff, #0f83cd);
+    background: -o-linear-gradient(top, #0a9eff, #0f83cd);
+    background: -ms-linear-gradient(top, #0a9eff, #0f83cd);
+    background: linear-gradient(top, #0a9eff, #0f83cd);
+    background-color: #0a9eff;
+    -webkit-box-shadow: inset 1px 0px 3px 0 #fff;
+    -moz-box-shadow: inset 1px 0px 3px 0 #fff;
+    box-shadow: inset 1px 0px 3px 0 #fff;
+}
+
+.f-b-search-btn:hover {
+    text-decoration: none;
+    background: -webkit-gradient(linear, left top, right top, from(#0f83cd), to(#0a9eff));
+    background: -webkit-linear-gradient(top, #0f83cd, #0a9eff);
+    background: -moz-linear-gradient(top, #0f83cd, #0a9eff);
+    background: -o-linear-gradient(top, #0f83cd, #0a9eff);
+    background: -ms-linear-gradient(top, #0f83cd, #0a9eff);
+    background: linear-gradient(top, #0f83cd, #0a9eff);
+    background-color: #0f83cd;
+}
+
+
+/* end sale-eq-filter-block */
+
+
+/* inner-wrap */
+
+.inner-wrap {
+    padding-top: 40px;
+    height: 100%;
+}
+
+/* end inner-wrap */
+
+
+/* sidebar */
+
+
+.sidebar-info {
+    margin-top: 30px;
+    padding: 15px;
+    width: 200px;
+    background: #fff;
+    border: 1px dotted #000;
+}
+
+.sidebar-info h3 {
+    margin-bottom: 15px;
+    font: 18px 'PFDinDisplayPro-Med';
+    color: #0f84d0;
+}
+
+.sidebar-info p {
+    margin-bottom: 10px;
+    font: 14px 'PFDinDisplayPro-Light';
+}
+
+
+/* end sidebar */
+
+
+/* sale-eq-content */
+
+
+.sale-eq-content {
+    width: 735px;
+    margin-left: 265px;
+}
+
+.sale-eq-content table {
+    width: 100%;
+}
+
+.caption {
+    border-bottom: 1px dotted #000;
+}
+
+
+.sale-eq-content table tr.caption th {
+    padding-bottom: 10px;
+    font: 15px 'PFDinDisplayPro-Light';
+}
+
+.sale-eq-content table a {
+    color: #000;
+}
+
+.sale-eq-content table .row {
+    position: relative;
+}
+
+.sale-eq-content table .col {
+    padding: 20px 0 0px; ;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.sale-eq-content table .col.one img {
+    width: 127px;
+}
+
+.sale-eq-content table .col.two span {
+    font: 14px 'PFDinDisplayPro-Light';
+}
+
+.sale-eq-content table .col.three a {
+    font: 14px 'PFDinDisplayPro-Med';
+    color: #035184;
+    text-decoration: underline;
+}
+
+.sale-eq-content table .col.four {
+    font: 14px 'PFDinDisplayPro-Light';
+    color: #af0303;
+}
+
+.sale-eq-content table .col.five {
+    font: 14px 'PFDinDisplayPro-Light';
+}
+
+.sale-eq-content table .col.six {
+    font: 14px 'PFDinDisplayPro-Med';
+    color: #af0303;
+}
+
+.sale-eq-content table .btn .col {
+    padding: 0 0 10px;
+    text-align: right;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.sale-eq-content table .btn .col a {
+    margin-right: 15px;
+    padding: 5px 10px;
+    font: 14px 'PFDinDisplayPro-Reg';
+    background: -webkit-gradient(linear, left top, right top, from(#3e3e3e), to(#232323));
+    background: -webkit-linear-gradient(top, #3e3e3e, #232323);
+    background: -moz-linear-gradient(top, #3e3e3e, #232323);
+    background: -o-linear-gradient(top, #3e3e3e, #232323);
+    background: -ms-linear-gradient(top, #3e3e3e, #232323);
+    background: linear-gradient(top, #3e3e3e, #232323);
+    background-color: #3e3e3e;
+    color: #fff;
+}
+ 
+.sale-eq-content table .btn .col a:hover {
+    text-decoration: none;
+    color: #fbcf2a;
+}
+
+/* end sale-eq-content */
+
+/* bottom-articles-section */
+
+.bottom-articles-section {
+    margin-top: 40px;
+    height: 100%;
+}
+
+.bottom-articles-section article.bottom-article {
+    float: left;
+    padding: 20px 41px;
+    width: 250px;
+}
+
+.bottom-articles-section article h3 {
+    margin-bottom: 10px;
+    font: 18px 'PFDinDisplayPro-Med';
+    color: #0f84d0;
+}
+
+.bottom-articles-section article p {
+    font: 14px 'PFDinDisplayPro-Light';
+}
+ 
+
+/* end bottom-articles-section */
+
+
+/* //////////////////////// END SALE EQUIPMENT ///////////////////////////////*/
+
+
+
+/* //////////////////////// RENT EQUIPMENT ///////////////////////////////*/
+
+
+.rent-eq-title {
+    padding: 20px 0;
+    font: 22px 'PFDinDisplayPro-Med';
+}
+
+
+/* sale-eq-filter-block */
+
+
+.rent-eq-filter-section {
+    padding: 20px;
+    background: #ebebeb;
+}
+
+.rent-eq-filter-section input {
+    font: 16px 'PFDinDisplayPro-Light';
+    border: 1px solid #e3e3e3;
+}
+
+.rent-eq-filter-section input:focus {
+    outline: none;
+}
+
+.rent-eq-filter-section .filter-top .t-o-e-sec {
+    float: left;
+    position: relative;
+    margin-right: 32px;
+    width: 235px;
+}
+
+.rent-eq-filter-section .filter-top .t-o-e-sec:last-child {
+    margin-right: 0;
+}
+
+.rent-eq-filter-section .filter-top input {
+    height: 24px;
+    width: 222px;
+    padding-left: 10px;
+}
+
+
+/* //////////////////////// END RENT EQUIPMENT ///////////////////////////////*/
+
+
+/* //////////////////////// SPARES EQUIPMENT ///////////////////////////////*/
+
+.spares-eq-title {
+    padding: 20px 0;
+    font: 22px 'PFDinDisplayPro-Med';
+}
+
+
+/* sale-eq-filter-block */
+
+
+.spares-eq-filter-section {
+    padding: 20px;
+    background: #ebebeb;
+}
+
+.spares-eq-filter-section input {
+    font: 16px 'PFDinDisplayPro-Light';
+    border: 1px solid #e3e3e3;
+}
+
+.spares-eq-filter-section input:focus {
+    outline: none;
+}
+
+.spares-eq-filter-section .filter-top {
+    margin-bottom: 20px;
+}
+
+.spares-eq-filter-section .filter-top .t-o-e-sec {
+    float: left;
+    position: relative;
+    margin-right: 52px;
+    width: 285px;
+}
+
+.spares-eq-filter-section .filter-top .t-o-e-sec:last-child {
+    margin-right: 0;
+}
+
+.spares-eq-filter-section .filter-top input {
+    height: 24px;
+    width: 272px;
+    padding-left: 10px;
+}
+
+.spares-eq-filter-section .filter-top a.eq-drop-btn {
+    display: inline-block;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 26px;
+    height: 26px;
+    background: url(../images/down-arrow.png) no-repeat 50% 12px #f25924;
+} 
+
+.spares-eq-filter-section .filter-bottom .t-o-e-sec {
+    float: left;
+    position: relative;
+    margin-right: 12px;
+    width: 175px;
+}
+
+.spares-eq-filter-section .filter-bottom input[type="text"] {
+    padding-left: 10px;
+    width: 162px;
+    height: 24px;
+}
+
+.spares-eq-filter-section .filter-bottom a.eq-drop-btn {
+    display: inline-block;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 26px;
+    height: 26px;
+    background: url(../images/down-arrow.png) no-repeat 50% 12px #f25924;
+} 
+
+.spares-eq-filter-section .filter-bottom input[type="text"] + span {
+    padding: 0 10px;
+}
+
+.spares-eq-filter-section .filter-bottom input.max-price {
+    color: #056eb3;
+}
+
+.spares-eq-filter-section .filter-bottom input.min-price {
+    color: #e94428;
+}
+
+.spares-eq-filter-section .filter-bottom input[type="checkbox"] {
+    margin-left: 25px;
+}
+
+.spares-eq-filter-section .filter-bottom input[type="checkbox"] + label {
+    margin-left: 5px;
+    font: 16px 'PFDinDisplayPro-Light';
+}
+
+.spares-eq-filter-section .f-b-search-btn {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 5px 50px;
+    font: 14px 'PFDinDisplayPro-Reg';
+    background: -webkit-gradient(linear, left top, right top, from(#0a9eff), to(#0f83cd));
+    background: -webkit-linear-gradient(top, #0a9eff, #0f83cd);
+    background: -moz-linear-gradient(top, #0a9eff, #0f83cd);
+    background: -o-linear-gradient(top, #0a9eff, #0f83cd);
+    background: -ms-linear-gradient(top, #0a9eff, #0f83cd);
+    background: linear-gradient(top, #0a9eff, #0f83cd);
+    background-color: #0a9eff;
+    -webkit-box-shadow: inset 1px 0px 3px 0 #fff;
+    -moz-box-shadow: inset 1px 0px 3px 0 #fff;
+    box-shadow: inset 1px 0px 3px 0 #fff;
+}
+
+.spares-eq-filter-section .f-b-search-btn:hover {
+    text-decoration: none;
+    background: -webkit-gradient(linear, left top, right top, from(#0f83cd), to(#0a9eff));
+    background: -webkit-linear-gradient(top, #0f83cd, #0a9eff);
+    background: -moz-linear-gradient(top, #0f83cd, #0a9eff);
+    background: -o-linear-gradient(top, #0f83cd, #0a9eff);
+    background: -ms-linear-gradient(top, #0f83cd, #0a9eff);
+    background: linear-gradient(top, #0f83cd, #0a9eff);
+    background-color: #0f83cd;
+}
+
+
+/* //////////////////////// END SPARES EQUIPMENT ///////////////////////////////*/
+
+
+/* //////////////////////// CONTACTS EQUIPMENT ///////////////////////////////*/
+
+
+.main-content .company-contacts h3 {
+    margin-bottom: 15px;
+    font: 22px 'PFDinDisplayPro-Med';
+}
+
+.main-content .company-contacts span {
+    font: 17px 'PFDinDisplayPro-Light';
+}
+
+.main-content .company-contacts #map {
+    margin-top: 35px;
+    width: 100%;
+}
+
+
+/* //////////////////////// END CONTACTS EQUIPMENT ///////////////////////////////*/
+
+
+
+
+
+
+
+
