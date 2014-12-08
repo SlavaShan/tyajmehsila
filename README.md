@@ -1,3 +1,3 @@
 
-http://webvers.cc.ua/tyajmehsila/index.html
+http://webvers.cc.ua/portfolio/tyajmehsila/index.html
 
